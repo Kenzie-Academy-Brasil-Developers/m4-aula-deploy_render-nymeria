@@ -6,7 +6,7 @@ const createUserController = async (
   req: Request,
   res: Response
 ): Promise<Response> => {
-  const user = await createUserService(req.validatedBody as IUserBody);
+  const user = await createUserService(req.body as IUserBody);
 
   return res.status(200).json(user);
 };
